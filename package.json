@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "watch:sass": "sass -w src/sass:dist/css/",
+    "build:sass": "sass src/sass:dist/css/",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "build:eleventy": "npx @11ty/eleventy",
+    "start": "npm-run-all build:sass -p watch:*",
+    "build": "npm-run-all build:*"
   },
   "repository": {
     "type": "git",
