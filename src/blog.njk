@@ -1,0 +1,13 @@
+---
+layout: "base.njk"
+title: "Blog index Page"
+---
+<p>This is a Blog index Page</p>
+
+<h2>Blog posts</h2>
+<!-- https://www.11ty.dev/docs/collections/ -->
+<ul>
+  {%- for post in collections.posts %}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+  {%- endfor %}
+</ul>
