@@ -9,6 +9,14 @@ module.exports = function(eleventyConfig) {
     files: "dist/css/**/*.css"
   });
   
+  // https://www.11ty.dev/docs/filters/
+  eleventyConfig.addFilter("randomPost", (arr) => {
+    arr.sort(() => {
+      return 0.5 - Math.random();
+    });
+    return arr.slice(0, 1);
+  });
+  
   // https://www.11ty.dev/docs/config/
   return {
     dir: {
