@@ -1,0 +1,9 @@
+{
+  "html.suggest.html5": true,
+  "files.associations": {
+    "*.njk": "html"
+  },
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  }
+}
